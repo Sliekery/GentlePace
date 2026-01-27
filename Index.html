@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gentle Pace Apps</title>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Gentle Pace">
+    
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1c1c1e;
+            --text-primary: #ffffff;
+            --text-secondary: #8e8e93;
+            --accent-gold: #D9A621; /* Rich Gold */
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            background: linear-gradient(180deg, #1a1a1a 0%, var(--bg-color) 100%);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--accent-gold);
+            letter-spacing: -1px;
+        }
+
+        p.subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* APPS GRID */
+        .apps-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .app-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #333, #000);
+            border-radius: 20px; /* iOS Icon Shape */
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--accent-gold);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            overflow: hidden; /* Keeps the image inside the rounded corners */
+        }
+        
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image fills the box without stretching */
+        }
+
+        .app-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .app-desc {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .status-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            border: 1px solid #333;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        /* LEGAL & SUPPORT SECTION */
+        .legal-section {
+            max-width: 700px;
+            margin: 80px auto 40px;
+            padding: 40px 20px;
+            border-top: 1px solid #333;
+        }
+
+        h2 {
+            color: var(--accent-gold);
+            margin-top: 40px;
+            font-size: 1.5rem;
+        }
+        
+        h3 {
+            margin-top: 25px;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .contact-link {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        
+        .contact-link:hover {
+            border-color: var(--accent-gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
+            background-color: #0e0e0e;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gentle Pace Apps</h1>
+        <p class="subtitle">Simple tools for a complex world.</p>
+    </header>
+
+    <main>
+        <div class="apps-container">
+            
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="BudgetRoom.png" alt="Budget Room Icon">
+                </div>
+                <div class="app-title">Budget Room</div>
+                <div class="app-desc">
+                    Master your subscriptions. Track monthly spending, split costs, and get bill alerts before you pay.
+                </div>
+                <div class="status-badge">In Development</div>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="Pocket%20Crew.png" alt="Pocket Crew Icon">
+                </div>
+                <div class="app-title">Pocket Crew</div>
+                <div class="app-desc">
+                    The essential tool for ultra runners. Manage aid stations, pacing strategies, and gear checklists.
+                </div>
+                <div class="status-badge">In Development</div>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="DeepFocus.png" alt="DeepFocus Icon">
+                </div>
+                <div class="app-title">DeepFocus</div>
+                <div class="app-desc">
+                    Find your flow. A clean, distraction-free Pomodoro timer designed to keep you in the zone.
+                </div>
+                <div class="status-badge">In Development</div>
+            </div>
+
+        </div>
+
+        <div class="legal-section" id="privacy">
+            <h2>Privacy Policy</h2>
+            <p><strong>Effective Date: January 20, 2026</strong></p>
+            <p>This privacy policy applies to all mobile applications created by Tom Graulus (operating as Gentle Pace Apps), including <strong>Budget Room</strong>, <strong>Pocket Crew</strong>, and <strong>DeepFocus</strong>.</p>
+            
+            <h3>Data Collection</h3>
+            <p>Our applications are designed with privacy first. We do not collect personally identifiable information. All user data (such as subscription details, running stats, or timer settings) is stored locally on your device or in your personal iCloud storage (via Apple's iCloud Key-Value Store).</p>
+
+            <h3>Third-Party Access</h3>
+            <p>We do not share your data with third-party advertisers or data brokers. Data synchronization is handled exclusively through Apple's iCloud services, which is governed by Apple's Privacy Policy.</p>
+
+            <h2 id="support">Support</h2>
+            <p>If you have any questions regarding our applications, privacy policy, or need technical support, please contact us:</p>
+            <p><a href="mailto:gentlepace.app@gmail.com" class="contact-link">gentlepace.app@gmail.com</a></p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Gentle Pace Apps. All rights reserved.
+    </footer>
+
+</body>
+</html>
