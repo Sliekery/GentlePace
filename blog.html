@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Gentle Pace Apps</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Updates and news from Gentle Pace Apps.">
+
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1c1c1e;
+            --text-primary: #ffffff;
+            --text-secondary: #8e8e93;
+            --accent-gold: #D9A621;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #0e0e0e;
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-brand {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-gold);
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            background: linear-gradient(180deg, #1a1a1a 0%, var(--bg-color) 100%);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--accent-gold);
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* BLOG POSTS */
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        .blog-post {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border: 1px solid #333;
+            transition: border-color 0.2s;
+        }
+
+        .blog-post:hover {
+            border-color: #444;
+        }
+
+        .post-date {
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .post-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .post-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .post-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            border: 1px solid #333;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+
+        /* EMPTY STATE */
+        .coming-soon {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+
+        .coming-soon-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
+            background-color: #0e0e0e;
+        }
+
+        footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            nav {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .blog-post {
+                padding: 25px;
+            }
+            .post-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="Index.html" class="nav-brand">Gentle Pace Apps</a>
+        <div class="nav-links">
+            <a href="Index.html">Apps</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="Index.html#support">Support</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Blog</h1>
+        <p class="subtitle">Updates, insights, and news from Gentle Pace Apps.</p>
+    </header>
+
+    <main>
+        <div class="blog-container">
+
+            <article class="blog-post">
+                <div class="post-date">January 27, 2026</div>
+                <h2 class="post-title">Welcome to Gentle Pace Apps</h2>
+                <p class="post-excerpt">
+                    We're excited to introduce Gentle Pace Apps, a small indie studio focused on building thoughtful, privacy-first tools for everyday life. Our mission is simple: create apps that do one thing well, respect your privacy, and get out of your way.
+                </p>
+                <p class="post-excerpt">
+                    We currently have three apps in development: Budget Room for subscription management, Pocket Crew for ultra runners, and DeepFocus for distraction-free productivity. Each app is being crafted with care, and we can't wait to share them with you.
+                </p>
+                <div class="post-tags">
+                    <span class="post-tag">Announcement</span>
+                    <span class="post-tag">Company</span>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-date">January 20, 2026</div>
+                <h2 class="post-title">Why Privacy Matters to Us</h2>
+                <p class="post-excerpt">
+                    In an era where apps harvest data to sell ads, we're taking a different approach. All Gentle Pace apps store your data locally on your device or in your personal iCloud account. We never see your information, and we never will.
+                </p>
+                <p class="post-excerpt">
+                    This isn't just a feature - it's a core principle. We believe your financial data, fitness stats, and productivity habits belong to you alone. Building privacy-first apps may limit some features, but it's a tradeoff we're happy to make.
+                </p>
+                <div class="post-tags">
+                    <span class="post-tag">Privacy</span>
+                    <span class="post-tag">Philosophy</span>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-date">January 15, 2026</div>
+                <h2 class="post-title">Pocket Crew: Built by Runners, for Runners</h2>
+                <p class="post-excerpt">
+                    Pocket Crew started as a messy spreadsheet during training for a 100-mile race. Managing aid station drop bags, calculating pace splits, tracking mandatory gear, and planning nutrition - it was a lot to juggle across multiple apps and documents.
+                </p>
+                <p class="post-excerpt">
+                    We're building the tool we wish we had. Pocket Crew will bring all your race planning into one place, with full offline support for those remote mountain trails. More details coming soon as we finalize features.
+                </p>
+                <div class="post-tags">
+                    <span class="post-tag">Pocket Crew</span>
+                    <span class="post-tag">Running</span>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gentle Pace Apps. All rights reserved.</p>
+        <p><a href="Index.html#privacy">Privacy Policy</a> &middot; <a href="Index.html#support">Support</a></p>
+    </footer>
+
+</body>
+</html>
