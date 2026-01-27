@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepFocus - Gentle Pace Apps</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Find your flow. A clean, distraction-free Pomodoro timer designed to keep you in the zone.">
+
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1c1c1e;
+            --text-primary: #ffffff;
+            --text-secondary: #8e8e93;
+            --accent-gold: #D9A621;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #0e0e0e;
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-brand {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* HERO */
+        .app-hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(180deg, #1a1a1a 0%, var(--bg-color) 100%);
+        }
+
+        .app-icon-large {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #333, #000);
+            border-radius: 28px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        .app-icon-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            border: 1px solid #333;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+
+        /* FEATURES */
+        .features-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid #333;
+            transition: border-color 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .feature-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* DETAILS */
+        .details-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        .details-section h2 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .details-section p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
+            background-color: #0e0e0e;
+        }
+
+        footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            nav {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .tagline {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="Index.html" class="nav-brand">Gentle Pace Apps</a>
+        <div class="nav-links">
+            <a href="Index.html">Apps</a>
+            <a href="blog.html">Blog</a>
+            <a href="Index.html#support">Support</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="app-hero">
+            <div class="app-icon-large">
+                <img src="DeepFocus.png" alt="DeepFocus Icon">
+            </div>
+            <h1>DeepFocus</h1>
+            <p class="tagline">Find your flow.</p>
+            <div class="status-badge">In Development</div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Pomodoro Timer</div>
+                    <div class="feature-desc">Classic 25/5 work-break cycles to maintain focus and prevent burnout.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <div class="feature-title">Custom Intervals</div>
+                    <div class="feature-desc">Adjust work and break durations to match your personal rhythm.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <div class="feature-title">Minimal Design</div>
+                    <div class="feature-desc">A clean, distraction-free interface that stays out of your way.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-title">Focus Stats</div>
+                    <div class="feature-desc">Track your productive time. See your focus habits over days and weeks.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔕</div>
+                    <div class="feature-title">Do Not Disturb</div>
+                    <div class="feature-desc">Automatically enable DND during focus sessions to block interruptions.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌚</div>
+                    <div class="feature-title">Apple Watch</div>
+                    <div class="feature-desc">Start, pause, and track sessions right from your wrist.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="details-section">
+            <h2>About DeepFocus</h2>
+            <p>The Pomodoro Technique has helped millions of people stay productive, but most timer apps are cluttered with features you don't need. DeepFocus strips away the noise to give you exactly what matters: a timer, your stats, and nothing else.</p>
+            <p>The design philosophy is simple - when you're trying to focus, your tools shouldn't compete for attention. DeepFocus presents a clean, calm interface that helps you get into the zone and stay there.</p>
+            <p>Whether you're deep in code, studying for exams, or pushing through creative work, DeepFocus helps you protect your time and build better focus habits.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gentle Pace Apps. All rights reserved.</p>
+        <p><a href="Index.html#privacy">Privacy Policy</a> &middot; <a href="Index.html#support">Support</a></p>
+    </footer>
+
+</body>
+</html>

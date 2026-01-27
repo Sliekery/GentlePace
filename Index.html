@@ -167,9 +167,76 @@
             border-top: 1px solid #222;
             background-color: #0e0e0e;
         }
+
+        footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #0e0e0e;
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-brand {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-gold);
+        }
+
+        .app-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="Index.html" class="nav-brand">Gentle Pace Apps</a>
+        <div class="nav-links">
+            <a href="Index.html" class="active">Apps</a>
+            <a href="blog.html">Blog</a>
+            <a href="#support">Support</a>
+        </div>
+    </nav>
 
     <header>
         <h1>Gentle Pace Apps</h1>
@@ -178,39 +245,45 @@
 
     <main>
         <div class="apps-container">
-            
-            <div class="app-card">
-                <div class="app-icon">
-                    <img src="BudgetRoom.png" alt="Budget Room Icon">
-                </div>
-                <div class="app-title">Budget Room</div>
-                <div class="app-desc">
-                    Master your subscriptions. Track monthly spending, split costs, and get bill alerts before you pay.
-                </div>
-                <div class="status-badge">In Development</div>
-            </div>
 
-            <div class="app-card">
-                <div class="app-icon">
-                    <img src="Pocket%20Crew.png" alt="Pocket Crew Icon">
+            <a href="budget-room.html" class="app-card-link">
+                <div class="app-card">
+                    <div class="app-icon">
+                        <img src="BudgetRoom.png" alt="Budget Room Icon">
+                    </div>
+                    <div class="app-title">Budget Room</div>
+                    <div class="app-desc">
+                        Master your subscriptions. Track monthly spending, split costs, and get bill alerts before you pay.
+                    </div>
+                    <div class="status-badge">In Development</div>
                 </div>
-                <div class="app-title">Pocket Crew</div>
-                <div class="app-desc">
-                    The essential tool for ultra runners. Manage aid stations, pacing strategies, and gear checklists.
-                </div>
-                <div class="status-badge">In Development</div>
-            </div>
+            </a>
 
-            <div class="app-card">
-                <div class="app-icon">
-                    <img src="DeepFocus.png" alt="DeepFocus Icon">
+            <a href="pocket-crew.html" class="app-card-link">
+                <div class="app-card">
+                    <div class="app-icon">
+                        <img src="Pocket%20Crew.png" alt="Pocket Crew Icon">
+                    </div>
+                    <div class="app-title">Pocket Crew</div>
+                    <div class="app-desc">
+                        The essential tool for ultra runners. Manage aid stations, pacing strategies, and gear checklists.
+                    </div>
+                    <div class="status-badge">In Development</div>
                 </div>
-                <div class="app-title">DeepFocus</div>
-                <div class="app-desc">
-                    Find your flow. A clean, distraction-free Pomodoro timer designed to keep you in the zone.
+            </a>
+
+            <a href="deepfocus.html" class="app-card-link">
+                <div class="app-card">
+                    <div class="app-icon">
+                        <img src="DeepFocus.png" alt="DeepFocus Icon">
+                    </div>
+                    <div class="app-title">DeepFocus</div>
+                    <div class="app-desc">
+                        Find your flow. A clean, distraction-free Pomodoro timer designed to keep you in the zone.
+                    </div>
+                    <div class="status-badge">In Development</div>
                 </div>
-                <div class="status-badge">In Development</div>
-            </div>
+            </a>
 
         </div>
 
@@ -232,7 +305,8 @@
     </main>
 
     <footer>
-        &copy; 2026 Gentle Pace Apps. All rights reserved.
+        <p>&copy; 2026 Gentle Pace Apps. All rights reserved.</p>
+        <p><a href="#privacy">Privacy Policy</a> &middot; <a href="#support">Support</a></p>
     </footer>
 
 </body>
